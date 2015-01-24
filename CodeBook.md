@@ -22,14 +22,10 @@ The final dataset is written to "tidy.txt" and can be read in with the following
 Data Column Description
 ----
 
-Subject
+The first two columns are for identifying the person and the activity they were engaging in for the data collection.
 
-   Identifier for the subject providing the data, ranging from 1 to 30.
-   
-Activity
-
-	A label for the level activity of a data point.
-	One of WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, or LAYING.
+1. Subject - Identifier for the subject providing the data, ranging from 1 to 30.
+2. Activity - A label for the level activity of a data point. One of "WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", or "LAYING".
 
 Each subsequent column is an average of values for a give Subject/AcivityLevel in the range -1 to 1.
 [See below for more detail on the variables and their derivation.](#datadetail)
