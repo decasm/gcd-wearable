@@ -26,15 +26,15 @@ The input labels used abbreviated forms of descriptive terms.
 Abbreviations were expanded and duplications and punctuation were removed so that
 "tBodyAccJerk-std()-X" became "timeBodyAccelerometerJerkStdDevX"
 and
-"fBodyBodyGyroMag-mean()" became "frequencyBodyGyroscopeMagnitudeMean"
+"fBodyBodyGyroMag-mean()" became "frequencyBodyGyroscopeMagnitudeMean".
 
 ### Merging data
 The data was divided in two different ways. First, it was partioned into train and test subsets.
-Each of those was divided into a measurements file, a subject identifier file, and an activity code file.
-There was also a single activity label file paired the numeric code to a string label.
+Each of those was then divided into a measurements file, a subject identifier file, and an activity code file.
+There was also a single activity label file which paired the numeric code to a string label.
 
 For each of train and test, the measurements file as read in using the cleaned up columns from above.
-Then the subject id and activity id were combined with the measurements with cbind.
+Then the subject id and activity id were read in and combined (via cbind) with the measurements data.
 Then the complete train and test sets were merged together with rbind.
 
 ### Filtering data
