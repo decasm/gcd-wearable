@@ -23,9 +23,11 @@ Data Column Description
 ----
 
 Subject
+
    Identifier for the subject providing the data, ranging from 1 to 30.
    
 Activity
+
 	A label for the level activity of a data point.
 	One of WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, or LAYING.
 
