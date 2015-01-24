@@ -18,6 +18,34 @@ The final dataset is written to "tidy.txt" and can be read in with the following
 
 	verify <- read.table("data/tidy.txt", sep=" ", headers=TRUE)
 
+Data Cleaning Description
+----
+
+### Cleaning data labels
+The input labels used abbreviated forms of descriptive terms.
+Abbreviations were expanded and duplications and punctuation were removed so that
+"tBodyAccJerk-std()-X" became "timeBodyAccelerometerJerkStdDevX"
+and
+"fBodyBodyGyroMag-mean()" became "frequencyBodyGyroscopeMagnitudeMean"
+
+### Merging data
+The data was divided in two different ways. First, it was partioned into train and test subsets.
+Each of those was divided into a measurements file, a subject identifier file, and an activity code file.
+There was also a single activity label file paired the numeric code to a string label.
+
+For each of train and test, the measurements file as read in using the cleaned up columns from above.
+Then the subject id and activity id were combined with the measurements with cbind.
+Then the complete train and test sets were merged together with rbind.
+
+### Filtering data
+From the fully merged data frame, a subset of columns was extracted where the columns indicated a mean or a standard deviation,
+along with the subject id and activity id.
+The activity ids were then replaced with corresponding activity labels.
+
+### Summarizing the data
+For each subject/activity pair, all the data points for a given column were averaged together and the resultant data frame
+written to file.
+
 
 Data Column Description
 ----
