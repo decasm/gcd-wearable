@@ -10,11 +10,12 @@ Raw data was gathered from the phone's accelerometer and its gyroscope.
 The values used in this process were derived by [a variety of calculations (described below)](#datadetail).
 
 Conceptually, this process summarizes the original data by 
-# Subsetting the data, pulling out only fields which are a mean or a standard deviation
-# Grouping the data by the subject and activity
-# Averaging all the data for a given subject/activity pairing.
+- Subsetting the data, pulling out only fields which are a mean or a standard deviation
+- Grouping the data by the subject and activity
+- Averaging all the data for a given subject/activity pairing.
 
 The final dataset is written to "tidy.txt" and can be read in with the following R command:
+
 	verify <- read.table("data/tidy.txt", sep=" ", headers=TRUE)
 
 

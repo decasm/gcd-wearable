@@ -10,21 +10,24 @@ The script has been tested from within the RStudio environment. Execution with R
 Execution
 ----
 From within an RStudio session, you can run the following to execute the script.
+
 	source("run_analysis.R")
+
 Runtime for me is approximately 5 minutes.
 
 The script will create a "data" directory if it doesn't already exist.
 It will write the resultant tidy file to "data/tidy.txt".
 The file can be read back in with the following command:
+
 	verify <- read.table("data/tidy.txt", sep=" ", headers=TRUE)
 
 Project Instructions
 ----
-# Merges the training and the test sets to create one data set.
-# Extracts only the measurements on the mean and standard deviation for each measurement. 
-# Uses descriptive activity names to name the activities in the data set
-# Appropriately labels the data set with descriptive variable names. 
-# From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+- Merges the training and the test sets to create one data set.
+- Extracts only the measurements on the mean and standard deviation for each measurement. 
+- Uses descriptive activity names to name the activities in the data set
+- Appropriately labels the data set with descriptive variable names. 
+- From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 Decisions/Reasoning
 ----
